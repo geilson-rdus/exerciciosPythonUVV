@@ -11,7 +11,7 @@ try:
   
   print(f'Para encher o tanque apenas com gasolina: R$ {precoGasolina * volumeTanque * 1000: .2f}')
   print(f'Para encher o tanque apenas com álcool: R$ {precoAlcool * volumeTanque * 1000: .2f}')
-  print(f'Para encher o tanque na proporção {proporcaoAlcool: .2f} % álcool e {proporcaoGasolina: .2f} % gasolina: R$ {(precoGasolina * volumeTanque * 1000 * (proporcaoGasolina/100)) + (precoAlcool * volumeTanque * 1000 * (proporcaoAlcool/100)):.2f}')
+  print(f'Para encher o tanque na proporção {proporcaoAlcool: .2f} % álcool e {proporcaoGasolina: .2f} % gasolina: R$ {(precoGasolina * volumeTanque * 1000 * (proporcaoGasolina/100)) + (precoAlcool * volumeTanque * 1000 * (proporcaoAlcool/100)): .2f}')
 
 except:
   print('ERRO: Dados de Entrada')
