@@ -62,3 +62,36 @@ try:
         print(f'Seu IMC: {IMC: .2f}')
 except:
     print('ERRO: Dados de Entrada')
+
+# EXERCÍCIO 1 f) Calcular e exibir o volume em litros de uma esfera de Raio (R), sabendo que o usuário deve informar o Raio (R) em metros. Sabe-se que: VolumeEsfera = 4 3 ⁄ * π * R3 e que 1 Litro é igual a 10-3 m3.
+
+try: 
+    raio = float(input('Informe o raio em metros: '))
+    if(raio <= 0):
+        print('ERRO: Dados de Entrada')
+    else:
+        volume = (4 * 3.14 * (raio ** 3))/3
+        volume *= 1000
+        print(f'O volume da esfera em litros: {volume: .2f}L')
+except:
+    print('ERRO: Dados de Entrada')
+
+# EXERCÍCIO 1 g) Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato. Com isso, exiba na tela:
+
+try: 
+    valorHora = float(input('Informe o seu salário por hora trabalhada em reais: '))
+    horasTrabalhadas = float(input('Informe a quantidade de horas trabalhadas: '))
+    if(valorHora <= 0 or horasTrabalhadas <= 0):
+        print('ERRO: Dados de Entrada')
+    else:
+        salario = valorHora * horasTrabalhadas
+        inss = salario * 0.08
+        sindicato = salario * 0.05
+        liquido = salario - inss - sindicato - (salario*0.11)
+        
+        print(f'Salário bruto: R${salario: .2f}')
+        print(f'Quanto pagou ao INSS: R${inss: .2f}')
+        print(f'Quanto pagou ao sindicato: R${sindicato: .2f}')
+        print(f'Salário líquido: R${liquido: .2f}')
+except:
+    print('ERRO: Dados de Entrada')
