@@ -95,3 +95,85 @@ try:
         print(f'Salário líquido: R${liquido: .2f}')
 except:
     print('ERRO: Dados de Entrada')
+
+# EXERCÍCIO 1 h) Calcular e exibir a quantidade de tinta (em latas) e o custo (em reais) para pintar um tanque cilíndrico de base circular de Raio (R) e altura (H) em metros,
+
+try: 
+    alturaCilindro = float(input('Informe a altura do tanque cilíndrico em metros: '))
+    raioCilindro = float(input('Informe o raio do tanque cilíndric em metros: '))
+    if(alturaCilindro <= 0 or raioCilindro <= 0):
+        print('ERRO: Dados de Entrada')
+    else:
+        areaBaseCilindro = 3.14 * (raioCilindro ** 2)
+        comprimentoBaseCilindro = 2 * 3.14 * raioCilindro
+        areaCorpoCilindro = comprimentoBaseCilindro * alturaCilindro
+        areaTotalCilindro = (2 * areaBaseCilindro) + areaCorpoCilindro
+        
+        qtdLatasTinta = round(areaTotalCilindro / 15 , 0)
+        preco = qtdLatasTinta * 50
+        
+        print(f'Quantidade de latas: {qtdLatasTinta: .0f}')
+        print(f'Preço em reais: R$ {preco: .2f}')
+except:
+    print('ERRO: Dados de Entrada')
+
+# EXERCÍCIO 1 i) Calcular e exibir a distância entre dois pontos quaisquer do plano, P(x1, y1) e Q(x2, y2), sabendo que a fórmula da distância é d = √(x2 – x1) 2 + (y2 – y1) 2, sendo os pontos P(x1, y1) e Q(x2, y2) como dados de entrada.
+
+try: 
+    pontoAX = float(input('Primeiro elemento do par ordenado do ponto A: '))
+    pontoAY = float(input('Segundo elemento do par ordenado do ponto A: '))
+    pontoBX = float(input('Primeiro elemento do par ordenado do ponto B: '))
+    pontoBY = float(input('Segundo elemento do par ordenado do ponto B: '))
+    
+    distancia = (((pontoBX - pontoAX) ** 2) + ((pontoBY - pontoAY) ** 2)) ** (1/2)
+    
+    print(f'A distância entre os pontos é {distancia: .2f}')
+    
+except:
+    print('ERRO: Dados de Entrada')
+
+# EXERCÍCIO 1 j) Calcular e exibir o tempo (em horas) de autonomia de uma caixa d’água de um restaurante que consome 1350 litros por hora em média. O tanque do restaurante é cilíndrico de base circular de Raio (R) e de altura (H) em metros. Sabendo que 1 m3 = 1000 Litros.
+
+try: 
+    alturaCilindro = float(input('Informe a altura do tanque cilíndrico em metros: '))
+    raioCilindro = float(input('Informe o raio do tanque cilíndric em metros: '))
+    if(alturaCilindro <= 0 or raioCilindro <= 0):
+        print('ERRO: Dados de Entrada')
+    else:
+        volumeCilindro = 3.14 * (raioCilindro ** 2) * alturaCilindro * 1000
+        autonomia = round(volumeCilindro / 1350,0)
+        
+        print(f'A autonomia do tanque é de aproximadamente {autonomia: .0f} horas')
+except:
+    print('ERRO: Dados de Entrada')
+
+# EXERCÍCIO 1 k) Faça um programa que peça o tamanho de um arquivo para download (em Megabytes) e a velocidade de um link de Internet (em Megabytes / Segundo), calcule e informe o tempo: Minutos + Segundos aproximado de download do arquivo usando este link.
+
+try: 
+    tamanhoArquivo = float(input('Tamanho do arquivo em megabytes: '))
+    velocidadeDownload = float(input('Velocidade de download em megabytes por segundo: '))
+    if(tamanhoArquivo <= 0 or velocidadeDownload <= 0):
+        print('ERRO: Dados de Entrada')
+    else:
+        tempoDownload = tamanhoArquivo * velocidadeDownload
+        
+        minutos, segundos = divmod(tempoDownload, 60)
+        
+        print(f'O tempo de dowload é: {minutos: .0f}minutos e {segundos: .0f}segundos')
+except:
+    print('ERRO: Dados de Entrada')
+
+# EXERCÍCIO 1 l)Calcular e exibir a distância máxima (em Quilômetros) de autonomia de um carro que possui um tanque de combustível cúbico de lado (L) em metros e Altura (h) de preenchimento do tanque. Sabendo que seu consumo é em média 10 km/litro. Sabendo que 1 m3 = 1000 Litros.
+
+try: 
+    ladoCubo = float(input('Lado do tanque cúbico em metros: '))
+    if(ladoCubo <= 0):
+        print('ERRO: Dados de Entrada')
+    else:
+        volumeTanque = (ladoCubo ** 3) * 1000
+        
+        autonomiaCarro = volumeTanque / 10
+        
+        print(f'A distância distância máxima (em Quilômetros) de autonomia do carro é {autonomiaCarro: .2f} km')
+except:
+    print('ERRO: Dados de Entrada')
