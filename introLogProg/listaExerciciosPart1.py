@@ -155,7 +155,7 @@ try:
     if(tamanhoArquivo <= 0 or velocidadeDownload <= 0):
         print('ERRO: Dados de Entrada')
     else:
-        tempoDownload = tamanhoArquivo * velocidadeDownload
+        tempoDownload = tamanhoArquivo / velocidadeDownload
         
         minutos, segundos = divmod(tempoDownload, 60)
         
