@@ -2,9 +2,9 @@
 # se os valores informados forem iguais) e exiba na saída a média dos dois maiores números lidos.
 
 try:
-    n1 = int(input('Informe o primeiro número real: '))
-    n2 = int(input('Informe o segundo número real: '))
-    n3 = int(input('Informe o terceiro número real: '))
+    n1 = float(input('Informe o primeiro número real: '))
+    n2 = float(input('Informe o segundo número real: '))
+    n3 = float(input('Informe o terceiro número real: '))
     if(n1==n2 or n1==n3 or n2==n3):
         print('ERRO: Você informou números iguais')
     else:
