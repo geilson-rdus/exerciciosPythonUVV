@@ -8,7 +8,9 @@ try:
     n3 = int(input('Informe o terceiro número inteiro positivo: '))
     n4 = int(input('Informe o quarto número inteiro positivo: '))
     n5 = int(input('Informe o quinto número inteiro positivo: '))
-    if(n1==n2 or n1==n3 or n1==n4 or n1==n5 or n2==n3 or n2==n4 or n2==n5 or n3==n4 or n3==n5 or n4==n5):
+    if(n1 < 0 or n2 < 0 or n3 < 0 or n4 < 0 or n5 < 0):
+        print('ERRO: Você informou número(s) negativo(s)')
+    elif(n1==n2 or n1==n3 or n1==n4 or n1==n5 or n2==n3 or n2==n4 or n2==n5 or n3==n4 or n3==n5 or n4==n5):
         print('ERRO: Você informou números iguais')
     else:
         somaPares = 0
