@@ -11,7 +11,7 @@ try:
     else:
         if moeda.lower() == 'r':
             conversao1 = valorOriginal / 4.08  # Converte para dólares
-            conversao2 = conversao1 * 1.12  # Converte para libras
+            conversao2 = conversao1 / 1.12  # Converte para libras
             print(f'O valor informado em reais foi R${valorOriginal:.2f}, que em dólares é ${conversao1:.2f} e em libras é £{conversao2:.2f}')
         
         elif moeda.lower() == 'l':
