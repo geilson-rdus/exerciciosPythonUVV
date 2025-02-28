@@ -3,7 +3,7 @@ try:
     altura = float(input('Informe sua altura em metros: '))
     
     if(massa <= 0 or altura <= 0):
-        print('ERRO: Entrada inválida!')
+        print('ERRO: Você informou massa ou altura <= 0')
     else:
         imc = massa / (altura ** 2)
         if(imc < 18.5):
@@ -18,5 +18,5 @@ try:
             print(f'Seu IMC {imc: .2f} indica: Obesidade Grau II')
         else:
             print(f'Seu IMC {imc: .2f} indica: Obesidade Grau III')
-except:
-    print('ERRO: Entrada inválida! Digite um número válido para o valor.')
+except Exception as ERRO_EXCECAO:
+  print(f'ERRO DE EXCEÇÃO: {ERRO_EXCECAO}')
