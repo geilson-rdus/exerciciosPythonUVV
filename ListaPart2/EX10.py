@@ -21,5 +21,5 @@ try:
             print(f'O valor informado em toneladas foi {valorOriginal:.2f}, que em quilogramas é {conversao5:.2f} e em onças é {conversao6:.2f}')
         else:
             print('ERRO: unidade de medida inválida!')
-except:
-    print('ERRO: Entrada inválida! Digite um número válido para o valor.')
+except Exception as ERRO_EXCECAO:
+  print(f'ERRO DE EXCEÇÃO: {ERRO_EXCECAO}')
