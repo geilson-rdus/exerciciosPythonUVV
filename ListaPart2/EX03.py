@@ -3,10 +3,10 @@
 try: 
     tempo = float(input('Insira o tempo em segundos: '))
     if(tempo < 0):
-        print('ERRO: Dados de Entrada')
+        print('ERRO: Inseriu tempo negativo')
     else:
         horas, resto = divmod(tempo,3600)
         minutos, segundos = divmod(resto,60)
         print(f'Tempo: {horas: .0f} hora(s) {minutos: .0f} minuto(s) {segundos: .0f} segundo(s)')
-except:
-    print('ERRO: Dados de Entrada')
+except Exception as ERRO_EXCECAO:
+  print(f'ERRO DE EXCEÇÃO: {ERRO_EXCECAO}')
