@@ -10,6 +10,6 @@ try:
         conversao = ((valorOriginal - 32) * 5) / 9
         print(f'O valor informado em fahrenheit foi{valorOriginal: .2f} F, que em celsius é: {conversao: .2f} C')
     else:
-        print('ERRO: Dados de Entrada')
+        print('ERRO: Inseriu um valor não correspondente com as opções')
 except:
     print('ERRO: Dados de Entrada')
