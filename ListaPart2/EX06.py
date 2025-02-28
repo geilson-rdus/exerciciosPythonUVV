@@ -11,5 +11,5 @@ try:
             print(f'O número digitado foi {numero}. Seu quadrado é {quadrado},  que é ímpar e múltiplo de 11')
         else:
             print(f'O número digitado foi {numero}. Seu quadrado é {quadrado},  que não é ímpar ou não é múltiplo de 11')
-except:
-    print('ERRO: Dados de Entrada')
+except Exception as ERRO_EXCECAO:
+  print(f'ERRO DE EXCEÇÃO: {ERRO_EXCECAO}')
