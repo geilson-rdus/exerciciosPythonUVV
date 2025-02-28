@@ -1,12 +1,11 @@
-#Escrever um algoritmo em Python que determine o volume e a área de uma esfera de raio r (∈ R+∗). Sendo que π = 3.14.
-
+import math
 try: 
     raio = float(input('Insira um valor maior que 0: '))
     if(raio <= 0):
-        print('ERRO: Dados de Entrada')
+        print('ERRO: Você inseriu um valor negativo ou zero')
     else:
-        volumeEsfera = 4 * 3.14 * (raio ** 3) / 3
-        areaEsfera = 4 * 3.14 * (raio ** 2)
+        volumeEsfera = 4 * math.pi * (raio ** 3) / 3
+        areaEsfera = 4 * math.pi * (raio ** 2)
         print(f'O volume da esfera é{volumeEsfera: .2f} m^3 e a área é{areaEsfera: .2f} m^2')
-except:
-    print('ERRO: Dados de Entrada')
+except Exception as ERRO_EXCECAO:
+    print(f'ERRO DE EXCEÇÃO: {ERRO_EXCECAO}')
