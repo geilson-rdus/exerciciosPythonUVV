@@ -4,11 +4,11 @@ try:
     base = float(input('Base do retângulo em centímetros: '))
     altura = float(input('Altura do retângulo em centímetros: '))
     if(base <= 0 or altura <= 0):
-        print('ERRO: Dados de Entrada')
+        print('ERRO: Informou uma base ou altura <= 0')
     else:
         perimetro = 2*base + 2*altura
         perimetroPolegada = perimetro/2.54
         perimetroJardas = perimetroPolegada*0.03
         print(f'O perímetro: {perimetro: .2f} cm, {perimetroPolegada: .2f} polegadas e {perimetroJardas: .2f} jardas')
-except:
-    print('ERRO: Dados de Entrada')
+except Exception as ERRO_EXCECAO::
+    print(f'ERRO DE EXCEÇÃO: {ERRO_EXCECAO}')
