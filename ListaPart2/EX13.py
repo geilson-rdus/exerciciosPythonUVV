@@ -9,5 +9,5 @@ try:
         print(f'O cubo da média: {cuboMedia: .5f}')
     else:
         print('Os números não se adequaram as exigências')
-except:
-    print('ERRO: Entrada inválida! Digite um número válido para o valor.')
+except Exception as ERRO_EXCECAO:
+  print(f'ERRO DE EXCEÇÃO: {ERRO_EXCECAO}')
