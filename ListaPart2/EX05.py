@@ -10,12 +10,12 @@ try:
     publicoMeia = criancasMenos10 + criancasEntre11E17 + adultosDoadores
     
     if(publicoTotal < 0 or criancasMenos10 < 0 or criancasEntre11E17 < 0 or adultosDoadores < 0 or valorIngresso <= 0):
-        print('ERRO: Dados de Entrada')
+        print('ERRO: Informou valores negativos')
     elif(publicoMeia > publicoTotal):
-        print('ERRO: Dados de Entrada')
+        print('ERRO: Informou valoresque resultaram num público pagante de meia entrada maior do que o público total')
     else:
         publicoPagaInteira = publicoTotal - publicoMeia
         arrecadacao = (criancasEntre11E17 * (valorIngresso/2)) + (adultosDoadores * (valorIngresso/2)) + (publicoPagaInteira * valorIngresso)
         print(f'O público total foi {publicoTotal} e o a arrecadação foi R${arrecadacao: .2f}')
-except:
-    print('ERRO: Dados de Entrada')
+except Exception as ERRO_EXCECAO:
+  print(f'ERRO DE EXCEÇÃO: {ERRO_EXCECAO}')
