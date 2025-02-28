@@ -4,7 +4,7 @@ try:
     altura = float(input('Informe sua altura em metros: '))
     sexo = input('Informe seu sexo: ')
     if(altura <= 0):
-        print('ERRO: Dados de Entrada')
+        print('ERRO: Informou altura menor ou igual a zero')
     else:
         if(sexo.lower() == 'homem'):
             pesoIdeal = (72.7 * altura) - 58
@@ -13,6 +13,6 @@ try:
             pesoIdeal = (62.1 * altura) - 44.7
             print(f'Seu peso ideal é {pesoIdeal: .2f} Kg')
         else:
-            print('ERRO: Dados de Entrada')
-except:
-    print('ERRO: Dados de Entrada')
+            print('ERRO: Sexo inválido')
+except Exception as ERRO_EXCECAO:
+  print(f'ERRO DE EXCEÇÃO: {ERRO_EXCECAO}')
