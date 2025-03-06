@@ -13,7 +13,7 @@ try:
     if(adultosInteira < 0 or criancasMenos10 < 0 or criancasEntre11E17 < 0 or adultosDoadores < 0 or valorIngresso <= 0):
         print('ERRO: Informou valores negativos')
     else:
-        arrecadacao = (criancasEntre11E17 * (valorIngresso/2)) + (adultosDoadores * (valorIngresso/2)) + (adultosInteira * valorIngresso)
+        arrecadacao = (publicoMeia * (valorIngresso/2)) + (adultosInteira * valorIngresso)
         print(f'O público total foi de {publicoTotal} pessoas e a arrecadação foi R${arrecadacao: .2f}')
 except Exception as ERRO_EXCECAO:
   print(f'ERRO DE EXCEÇÃO: {ERRO_EXCECAO}')
